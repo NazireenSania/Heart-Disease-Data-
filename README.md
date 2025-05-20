@@ -45,3 +45,23 @@ Used DAX to create a **calculated column** aggregating multiple risk factors:
 All numeric factors were **normalized** using the formula:
 ```DAX
 Normalized_Age = ([Age] - MIN([Age])) / (MAX([Age]) - MIN([Age]))
+```
+
+
+
+
+`All numeric factors were **normalized** using the formula:
+```DAX
+Risk Score = 
+  0.3 * Normalized_Age +
+  0.3 * Sex +
+  0.3 * ChestPain +
+  0.3 * RestECG +
+  0.3 * Slope +
+  0.2 * Normalized_Cholesterol +
+  0.2 * FBS +
+  0.2 * Normalized_Thalach +
+  0.2 * Normalized_Trestbps +
+  0.2 * Thal +
+  0.1 * Normalized_Oldpeak
+```
